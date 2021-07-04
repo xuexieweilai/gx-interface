@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 from greatsoft.common.read_caseInExcel import read_excel_cases
-from greatsoft.common.reqmethods import RequestsManager
+from greatsoft.common.RequestHandler import RequestsManager
 
 
 def run(name):

@@ -9,10 +9,17 @@ class RequestsManager(object):
         self.header = header
         self.jsonD = jsonD
 
-    def test_api(self):
+    @ staticmethod
+    def make_url(case):
+        all_url = case["host"] + case["interface"]
+        return all_url
+
+    def send_request(self):
         if self.method == "GET":
             response = requests.get(url=self.url, headers= self.header, params=self.data)
             return response
         elif self.method == "POST":
             response = requests.post(url=self.url, headers=self.header, data=self.data)
             return response
+
+
